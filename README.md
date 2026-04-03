@@ -15,7 +15,7 @@ A collection of Claude Code skills.
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/lkende/claude-skills.git ~/Code/claude-skills
+git clone https://github.com/lkende/claude-skills.git ~/.claude/skills/lkende-claude-skills
 ```
 
 ### 2. Symlink the skill(s) you want
