@@ -144,12 +144,13 @@ python3 << 'EOF'
 from PIL import Image
 import os
 
-tmp_dir   = "tmp/screenshots"
+base_dir  = os.path.abspath("tmp/screenshots")
+tmp_dir   = base_dir
 n_pages   = {totalPages}
 vh        = {viewportHeight}
 fph       = {fullpageHeight}
 dpr       = {devicePixelRatio}
-out_path  = "tmp/screenshots/{outputFilename}"
+out_path  = os.path.join(base_dir, "{outputFilename}")
 
 paths  = [os.path.join(tmp_dir, f'.tmp_vp_{i}.png') for i in range(n_pages)]
 images = [Image.open(p) for p in paths]
