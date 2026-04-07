@@ -24,9 +24,15 @@ git clone https://github.com/lkende/claude-skills.git ~/.claude/skills/lkende-cl
 ln -s ~/.claude/skills/lkende-claude-skills/advanced-fullpage-screenshot ~/.claude/skills/advanced-fullpage-screenshot
 ```
 
-### 3. Add the required permission
+### 3. Use it
 
-The stitching step runs an inline Python script via heredoc. Add this to your `~/.claude/settings.json` under `allowedTools`:
+```
+/advanced-fullpage-screenshot https://example.com
+```
+
+The stitching step runs an inline Python script via heredoc (`python3 << ...`). Claude will prompt for approval the first time it runs — this is the recommended default.
+
+If you'd prefer to pre-authorize it in a specific project without being prompted, add this to that project's `.claude/settings.local.json`:
 
 ```json
 {
@@ -36,13 +42,7 @@ The stitching step runs an inline Python script via heredoc. Add this to your `~
 }
 ```
 
-If `allowedTools` already exists, add `"Bash(python3 << *)"` to the array.
-
-### 4. Use it
-
-```
-/advanced-fullpage-screenshot https://example.com
-```
+Do not add this to your global `~/.claude/settings.json` — that would pre-authorize heredoc Python execution across all projects.
 
 ---
 
