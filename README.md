@@ -21,7 +21,7 @@ git clone https://github.com/lkende/claude-skills.git ~/.claude/skills/lkende-cl
 ### 2. Symlink the skill(s) you want
 
 ```bash
-ln -s ~/Code/claude-skills/advanced-fullpage-screenshot ~/.claude/skills/advanced-fullpage-screenshot
+ln -s ~/.claude/skills/lkende-claude-skills/advanced-fullpage-screenshot ~/.claude/skills/advanced-fullpage-screenshot
 ```
 
 ### 3. Add the required permission
